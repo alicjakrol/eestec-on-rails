@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :submissions
   post '/accept/:id', to:'submissions#accept'
+    post '/reject/:id', to:'submissions#reject'
   root to:"submissions#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

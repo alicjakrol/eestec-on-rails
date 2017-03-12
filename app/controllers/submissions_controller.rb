@@ -16,9 +16,20 @@ class SubmissionsController < ApplicationController
     submission=Submission.find(id)
     submission.accepted=true
     submission.save
-    
+
     redirect_to :submissions
   end
+
+def reject
+  #zaakceptuj zgłoszenie
+  id=params[:id]
+
+  submission=Submission.find(id)
+  submission.accepted=false
+  submission.save
+
+  redirect_to :submissions
+end
 
   # GET /submissions/1
   # GET /submissions/1.json
