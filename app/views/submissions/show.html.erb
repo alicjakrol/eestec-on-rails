@@ -19,6 +19,8 @@
   <strong>Accepted:</strong>
   <%= @submission.accepted %>
 </p>
+
+
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>
 <%= link_to 'Accept', "/accept/#{@submission.id}", method: :post %>
